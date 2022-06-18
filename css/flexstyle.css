@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+/* Global default Setting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Css Variable */
+:root {
+  --bright-orange: hsl(115, 48%, 32%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(212, 100%, 13%);
+  --white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+  --font: 15px;
+  --font-small-weight: 400px;
+  --font-big-weight: 700px;
+  --ff-primary: "Lexand Deca", sans-serif;
+  --ff-secondary: "Big Shoulders Display";
+}
+
+/* import Font family from google font check md guide later */
+
+body {
+  line-height: 1.6;
+  background-color: var(--light-gray);
+}
+
+img {
+  height: 3.2rem;
+  object-fit: cover;
+  margin: 0.75rem;
+}
+
+h3 {
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+  color: var(--light-gray);
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+p {
+  color: var(--white-paragraph);
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-family: var(--ff-primary);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--light-gray);
+  background: linear-gradient(rgba(21, 69, 102, 0.7), rgba(126, 212, 159, 0.2));
+  margin-top: 1rem;
+}
+
+.nav-links .nav-link {
+  font-size: 2rem;
+  color: var(--light-gray);
+}
+
+.btn {
+  background: var(--light-gray);
+  padding: 0.45rem 1.3rem;
+  border: transparent;
+  border-radius: 1.3rem;
+  font-weight: var(--font-big-weight);
+  border: 1px solid var(--light-gray);
+  cursor: pointer;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--ff-primary);
+  letter-spacing: 2px;
+  position: relative;
+  left: 5%;
+}
+
+.btn:hover {
+  color: var(--light-gray);
+  border: 1px solid var(--light-gray);
+  background: none;
+}
+
+.cars {
+  width: 80vw;
+  margin: 1.5rem auto;
+}
+
+.sedans,
+.suv,
+.luxury {
+  padding: 1rem;
+  height: 65vh;
+  justify-content: center;
+  margin: auto;
+}
+
+.sedans {
+  background: var(--bright-orange);
+}
+
+.sedans .btn {
+  color: var(--bright-orange);
+}
+
+.sedans .btn:hover {
+  color: var(--light-gray);
+}
+.suv {
+  background-color: var(--dark-cyan);
+}
+
+.suv .btn {
+  color: var(--dark-cyan);
+}
+
+.suv .btn:hover {
+  color: var(--light-gray);
+}
+
+.luxury {
+  background: var(--very-dark-cyan);
+}
+
+.luxury .btn {
+  color: var(--very-dark-cyan);
+}
+
+.luxury .btn:hover {
+  color: var(--light-gray);
+}
+
+@media screen and (min-width: 765px) {
+  img {
+    height: 2.5rem;
+    margin: 1rem;
+  }
+
+  h3 {
+    font-size: 2.05rem;
+  }
+
+  p {
+    color: var(--light-gray);
+    font-size: 1.3rem;
+    margin-bottom: 3.7rem;
+    font-family: var(--ff-primary);
+    margin-left: 0.5rem;
+  }
+
+  .cars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sedans,
+  .suv,
+  .luxury {
+    height: 70vh;
+  }
+
+  .sedans {
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+  }
+
+  .luxury {
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+  }
+
+  .cars {
+    margin: auto;
+    height: 100vh;
+  }
+
+  .btn {
+    left: 10%;
+  }
+}
